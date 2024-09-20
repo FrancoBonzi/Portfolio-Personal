@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+      /* Estilos del formulario */
+      .error {
+          color: red;
+          font-size: 14px;
+      }
+      /* Tus otros estilos aquí */
+  </style>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+   <!--Menu Encabezado-->
+   <div class="contenedor-header">
+      <header>
+        <div class="logo">
+           <a href="#">Franco Santiago Bonzi</a>
+        </div>
+        <nav id="nav">
+        <ul>
+            <li><a href="#presentacion" onclick="seleccionar()">Presentación</a></li>
+            <li><a href="#sobre-mi" onclick="seleccionar()">Sobre-Mi</a></li>
+            <li><a href="#conocimientos" onclick="seleccionar()">Conocimientos</a></li>
+            <li><a href="#proyectos" onclick="seleccionar()">Proyectos</a></li>
+            <li><a href="#redes" >Redes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+           
+        </ul>
+        </nav>
+        <div class="nav-responsive">
+
+        </div>
+        
+      </header>
+
+   </div> 
+   
+   
+   <section id="presentacion" class="Presentacion">
+      <img src="Imagen/Imagen de WhatsApp 2024-09-17 a las 15.31.56_c3443803.jpg" alt="Foto Franco Santiago Bonzi">
+      <div class="bio animate_animated animate___shakeX">
+         <H2 class="bio Titulo">Bienvenidos a mi portfolio</H2>
+         <p class="bio_Texto">
+            Hola me llamo Franco, arme este portfolio personal para que me puedan conocer acerca de mis conocimientos y proyectos que tuve trabajando....
+         </p>
+      </div>
+
+   </section>
+
+   <section id="sobre-Mi" class="Sobre-Mi">
+   <h2>Más sobre mi</h2>
+   <p>
+      Me llamo Franco,tengo 20 años y soy estudiante de la Tecnicatura Universitaria en Programación (UTN FRGP General Pacheco) donde me encuentro en el segundo año de la carrera y
+      aparte de estar estudiar en la facultad también me encuentro haciendo cursos de Introducción en Java y Bases de datos SQL.
+      
+   </p>
+   <p>
+      Me considero una persona que le gusta trabajar en grupos ya que de esto puedo aprender mucho e innovadora ya que me gusta seguir aprendiendo cosas del rubro IT.
+   </p>
+   </section>
+
+   <section id="conocimientos" class="Conocimientos">
+   <h2 class="encabezadoConocimientos">Mis conocimientos</h2>
+
+   <div class="contenedor-de-conocimientos">
+     <div class="columna1">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/800px-ISO_C%2B%2B_Logo.svg.png" alt="C++" class="icono tajetaIcono">
+     <img src="https://blog.desafiolatam.com/wp-content/uploads/2023/04/Diferencias-entre-Git-y-Github-1.jpg" alt="Git y Github" class="icono tarjetaIcono"> 
+     </div>
+
+     <div class="Columna2">
+     <img src="https://blog.desafiolatam.com/wp-content/uploads/2018/05/sql-logo.png" alt="SQL" class="icono tarjetaIcono">
+     <img src="https://rosamarfil.es/tutoriales/wp-content/uploads/2019/08/java-logo-png.png" alt="Java" class="icono tarjetaIcono">
+     </div>
+
+   </div>
+   </section>
+
+   <section id="proyectos" class="proyectos">
+    <h2>Proyectos realizados o en proceso</h2>
+    <div class="Contenedor-Proyectos">
+      <div class="proyec">
+          <img src="Imagen/BBDD Tienda de libros.png" alt="Foto BBDD SQL Tienda de Libro">
+          <h3 class="Proyecto1">Tienda de Libros FB</h3>
+          <p class="Detalle-del-proyecto-1">
+              Una tienda de libros donde se va a realizar una Base de datos SQL y este proyecto se encuentra en proceso.
+          </p>
+          <a href="https://github.com/FrancoBonzi/Tienda-de-Libro-FB" target="_blank" class="boton-repo1">Ver</a>          
+      </div>
+      <div class="proyec 1">
+       <img src="Imagen/imagenFarmasoft.jpg" alt="Foto Proyecto Farmasoft">
+          <h3 class="Proyecto2">Farmasoft</h3>
+          <p class="Detalle-del-proyecto-2">
+              Sistema de gestión de stock y ventas de una farmacia. Este proyecto fue finalizado y realizado con C++.
+          </p>  
+          <a href="https://github.com/FrancoBonzi/Farmasoft1" target="_blank" class="boton-repositorio">Ver</a>
+        </div>
+      
+  </div>
+   </section>
+
+   <section id="redes" class="Red-Social">
+      <h2>Mis Redes</h2>
+      <div class="RedesIcons">
+         <a href="https://github.com/FrancoBonzi" target="_blank" class="icono">
+            <img src="Imagen/logotipo-de-github.png" alt="Github">
+         </a>             
+      </div>
+   </section>
+
+  
+   <section id="contacto" class="Contacto">
+      <div class="Contenedor-Contacto">
+          <h2>CONTACTO</h2>
+          <div class="Fila">
+              <div class="Columna">
+                  <input type="text" id="nombre" placeholder="Nombre completo">
+                  <span class="error" id="errorNombre"></span>
+
+                  <input type="text" id="telefono" placeholder="Teléfono">
+                  <span class="error" id="errorTelefono"></span>
+
+                  <input type="text" id="email" placeholder="Correo Electrónico">
+                  <span class="error" id="errorEmail"></span>
+
+                  <input type="text" id="asunto" placeholder="Asunto">
+                  <span class="error" id="errorAsunto"></span>
+
+                  <textarea id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                  <span class="error" id="errorMensaje"></span>
+
+                  <button onclick="validarFormulario()">Enviar Mensaje<i class="fa-solid fa-paper-plane"></i></button>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <script>
+    function validarFormulario() {
+        // Obtener los valores de los campos
+        const nombre = document.getElementById("nombre").value.trim();
+        const telefono = document.getElementById("telefono").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const asunto = document.getElementById("asunto").value.trim();
+        const mensaje = document.getElementById("mensaje").value.trim();
+
+        // Limpiar mensajes de error
+        document.getElementById("errorNombre").innerText = "";
+        document.getElementById("errorTelefono").innerText = "";
+        document.getElementById("errorEmail").innerText = "";
+        document.getElementById("errorAsunto").innerText = "";
+        document.getElementById("errorMensaje").innerText = "";
+
+        let formularioCorrecto = true;
+
+        
+        if (nombre === "") {
+            document.getElementById("errorNombre").innerText = "Por favor, ingrese su nombre.";
+            formularioCorrecto = false;
+        }
+
+        
+        if (telefono === "" || telefono.length < 7) {
+            document.getElementById("errorTelefono").innerText = "Por favor, ingrese un número de teléfono válido.";
+            formularioCorrecto = false;
+        }
+
+        
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === "" || !regexEmail.test(email)) {
+            document.getElementById("errorEmail").innerText = "Por favor, ingrese un correo electrónico válido.";
+            formularioCorrecto = false;
+        }
+
+        
+        if (asunto === "") {
+            document.getElementById("errorAsunto").innerText = "Por favor, ingrese el asunto de la consulta.";
+            formularioCorrecto = false;
+        }
+
+        
+        if (mensaje === "") {
+            document.getElementById("errorMensaje").innerText = "Por favor, ingrese un mensaje.";
+            formularioCorrecto = false;
+        }
+
+        
+        if (formularioCorrecto) {
+        alert("El formulario fue enviado correctamente.");
+        }
+    }
+    </script>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <h3> Otros contactos</h3>
+        <p>Otros medios de contactos que tengo y no dudes en contactarme:</p>
+        
+        <!-- Gmail logo with link -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bon.franco12@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo" class="logo-red">
+        </a>
+
+        <p>© 2024 Franco Santiago Bonzi. Todos los derechos reservados.</p>
+    </div>
+    </footer>
+
+  
+</body>
+</html>
